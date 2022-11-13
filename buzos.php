@@ -18,7 +18,7 @@
   <button type="submit"><a href="buzos.php">Buzos</a></button>
   <button type="submit"><a href="precio-menor-500.php">Productos menor a $500</a></button>
   <h2>Lista de ropa</h2>
-  <p>La siguiente lista muestra los datos de la ropa actualmente en stock.</p>
+  <p>La siguiente lista muestra los datos de las prendas de marca Addidas</p>
 
   <section>
     <div class="container">
@@ -28,7 +28,7 @@
         <?php
         
         $conexion=mysqli_connect("127.0.0.1","root","root"); mysqli_select_db($conexion,"potrero_tienda");
-        $consulta="SELECT*FROM ropa";    
+        $consulta="SELECT * FROM ropa WHERE tipo_prenda = 'buzo'";    
         $datos=mysqli_query($conexion,$consulta);
         
         
